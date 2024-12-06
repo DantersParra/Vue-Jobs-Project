@@ -8,7 +8,7 @@ const route = useRoute()
 const jobId = route.params.id
 
 const job = ref([])
-const isLoading = true
+const isLoading = ref(true)
 
 onMounted(async()=>{
 try {
@@ -23,8 +23,11 @@ try {
 </script>
 
 <template>
-        <section class="bg-green-50">
-      <div class="container m-auto py-10 px-6">
+      <section class="bg-green-50">
+      <div v-if="isLoading" class="text-center text-slate-700">
+        <RotateLoader />
+      </div>
+      <div v-else class="container m-auto py-10 px-6">
         <div class="grid grid-cols-1 md:grid-cols-70/30 w-full gap-6">
           <main>
             <div
