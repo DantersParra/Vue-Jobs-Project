@@ -4,6 +4,8 @@ import { useRoute, RouterLink } from 'vue-router';
 import Axios from 'axios'
 import RotateLoader from 'vue-spinner/src/RotateLoader.vue'
 
+import BackButton from '@/components/BackButton.vue'
+
 const route = useRoute()
 const jobId = route.params.id
 
@@ -12,7 +14,7 @@ const isLoading = ref(true)
 
 onMounted(async()=>{
 try {
-    const response = await Axios.get(`http://localhost:5010/jobs/${jobId}`)
+    const response = await Axios.get(`/api/jobs/${jobId}`)
     job.value = response.data
 } catch (error) {
     console.log('itlog',error)
@@ -23,6 +25,9 @@ try {
 </script>
 
 <template>
+  
+  <BackButton />
+
       <section class="bg-green-50">
       <div v-if="isLoading" class="text-center text-slate-700">
         <RotateLoader />

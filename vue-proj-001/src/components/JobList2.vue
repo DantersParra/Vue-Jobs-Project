@@ -20,7 +20,7 @@ const state = reactive({
 
 onMounted(async()=>{
   try {
-    const response = await Axios.get('http://localhost:5010/jobs')
+    const response = await Axios.get('/api/jobs')
     state.jobs = response.data
   } catch (error) {
     console.log('itlog',error)
