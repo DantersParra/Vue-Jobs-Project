@@ -85,17 +85,31 @@
       }
     },
     {
-      "id": "0019",
-      "type": "Full-Time",
-      "title": "",
-      "description": "",
-      "salary": "Under $50K",
-      "location": "",
+      "id": "087b",
+      "type": "Internship",
+      "title": "Macho dancer",
+      "description": "haha testing onli",
+      "salary": "Over $200K",
+      "location": "PH",
       "company": {
-        "name": "",
-        "description": "",
-        "contactEmail": "",
-        "contactPhone": ""
+        "name": "Adonis",
+        "description": "isang gae bar",
+        "contactEmail": "asdf@test.com",
+        "contactPhone": "123"
+      }
+    },
+    {
+      "id": "f5fc",
+      "type": "Part-Time",
+      "title": "Zoo keeper",
+      "description": "test",
+      "salary": "Over $200K",
+      "location": "PH",
+      "company": {
+        "name": "Zoo",
+        "description": "zoo keeper",
+        "contactEmail": "asdf@test.com",
+        "contactPhone": "123"
       }
     }
   ]

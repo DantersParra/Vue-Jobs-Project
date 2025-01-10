@@ -18,23 +18,27 @@
     import axios from 'axios'
     import router from '@/router';
 
+    import { useToast } from 'vue-toastification';
+    const toast = useToast()
+
     const submitForm = async() => {
         const newJob = {
-            type: 'Full-Time',
-            title: '',
-            description: '',
-            salary: 'Under $50K',
-            location: '',
+            type: form.type,
+            title: form.title,
+            description: form.description,
+            salary: form.salary,
+            location: form.location,
             company: {
-                name: '',
-                description: '',
-                contactEmail: '',
-                contactPhone: ''
+                name: form.company.name,
+                description: form.company.description,
+                contactEmail: form.company.contactEmail,
+                contactPhone: form.company.contactPhone
             }
         }
         try{
             const response = await axios.post('/api/jobs', newJob)
             // console.log(response)            
+            toast.success('Job added successful!')
             router.push(`/jobs/${response.data.id}`)
         }
         catch(err){
