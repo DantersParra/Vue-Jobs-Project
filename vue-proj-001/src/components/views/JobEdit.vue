@@ -43,7 +43,7 @@
             }
         }
         try{
-            const response = await axios.put(`/api/jobs/${jobId}`)
+            const response = await axios.put(`/api/jobs/${jobId}`, newJob)
             toast.success('Edit saved successfully!')
             router.push(`/jobs/${response.data.id}`)
         }
