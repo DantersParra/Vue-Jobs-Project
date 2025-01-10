@@ -85,18 +85,7 @@
       }
     },
     {
-      "id": "087b",
-      "type": "Internship",
-      "title": "Macho dancer",
-      "description": "haha testing onli",
-      "salary": "Over $200K",
-      "location": "PH",
-      "company": {
-        "name": "Adonis",
-        "description": "isang gae bar",
-        "contactEmail": "asdf@test.com",
-        "contactPhone": "123"
-      }
+      "id": "087b"
     },
     {
       "id": "f5fc",
